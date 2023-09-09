@@ -1,0 +1,11 @@
+#1# what do you understand by  statefull and stateless application?
+Stateful Application:
+
+In a stateful application, the application keeps track of the state or data associated with a user's interactions or sessions.
+It maintains information about the user's actions and the current context throughout the session.
+
+Stateless Application:
+
+In a stateless application, each request from a client to the server is treated independently, and the server does not store any information about the client's previous requests or interactions.
+Stateless applications do not maintain session-specific data or context between requests.
+
