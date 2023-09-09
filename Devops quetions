@@ -9,3 +9,28 @@ Stateless Application:
 In a stateless application, each request from a client to the server is treated independently, and the server does not store any information about the client's previous requests or interactions.
 Stateless applications do not maintain session-specific data or context between requests.
 
+#2# what is public and private key?
+private keys can be used for both encryption and decryption, while Public keys are used only for the purpose of encrypting the sensitive data. Private keys are shared between the sender and the receiver, whereas public keys can be freely circulated among multiple users.
+
+#3# If we have multiple VPCs then how we can connect it ?
+What is a method of connecting multiple VPCs through networking?
+A transit VPC is a common strategy for connecting multiple, geographically disperse VPCs and remote networks in order to create a global network transit center. A transit VPC simplifies network management and minimizes the number of connections required to connect multiple VPCs and remote networks.
+
+#4# what is the difference between encryption encoding and hashing?
+Encryption:
+
+Encryption is a process of converting data into a secure and unreadable format using an algorithm and a key.
+It is reversible, meaning the original data can be decrypted back to its original form using the appropriate decryption key.
+Encryption is used for protecting the confidentiality of data, such as sensitive information like passwords and credit card numbers.
+Encoding:
+
+Encoding is a process of converting data into a different format, often for the purpose of ensuring data integrity during transmission or storage.
+It is typically used for non-sensitive data and is not meant for security.
+Encoding is reversible, and the original data can be obtained by decoding it using the appropriate encoding scheme, which is usually publicly known.
+Common encoding schemes include Base64 and URL encoding.
+Hashing:
+
+Hashing is a one-way process of converting data (of any size) into a fixed-length string of characters, called a hash value or digest.
+It is not reversible, meaning you cannot obtain the original data from the hash value.
+Hashing is commonly used for data verification and password storage. It allows you to compare hash values to verify data integrity or check if a password is correct without storing the actual password.
+In summary, encryption is used for securing data and is reversible, encoding is used for data representation and is reversible, while hashing is used for data verification and is not reversible.
