@@ -1,1 +1,25 @@
-AWS-S3 bucket
+what we learn in in AWS S3 service:
+how to create the S3 buckets.
+versionig in s3 bucket
+how to access the data from the s3 url
+static website hosting and accesing through the url
+also set up the the alert for the data adding or deleting in the s3 bucket through the AWS SNS server
+use case -- if one region is down then create the replication rule and store the backup in another region and use it when its required
+
+
+Storage type in s3 and its use case:
+•Amazon S3 Standard - General Purpose
+•Amazon S3 Standard-Infrequent Access (IA)
+•Amazon S3 One Zone-Infrequent Access
+•Amazon S3 Intelligent Tiering
+•Amazon Glacier
+•Amazon Glacier Deep Archive
+
+S3 Standard: This is the default storage class for S3 and offers high durability, availability, and performance for frequently accessed data. S3 Standard is ideal for applications that require low latency and high throughput.
+S3 Intelligent-Tiering: This storage class is designed to automatically optimize costs and performance by moving data between two access tiers (frequent and infrequent) based on changing access patterns. This allows you to save costs by storing infrequently accessed data in a lower-cost tier.
+S3 Standard-Infrequent Access (S3 Standard-IA): This storage class is designed for infrequently accessed data that requires rapid access when needed. S3 Standard-IA offers lower storage costs than S3 Standard, but with a higher retrieval fee.
+S3 One Zone-Infrequent Access (S3 One Zone-IA): This storage class is similar to S3 Standard-IA, but stores data in a single availability zone instead of across multiple zones. This makes it less resilient to availability zone failures but offers lower storage costs.
+S3 Glacier: This storage class is designed for long-term data archival and offers the lowest storage costs but with a longer retrieval time (minutes to hours). S3 Glacier is ideal for data that is rarely accessed and needs to be stored for several years.
+S3 Glacier Deep Archive: This storage class is designed for long-term data archival and offers the lowest storage costs, but with a longer retrieval time (12 hours or more). S3 Glacier Deep Archive is ideal for data that is rarely accessed and needs to be stored for decades or longer.
+
+
