@@ -34,3 +34,13 @@ Hashing is a one-way process of converting data (of any size) into a fixed-lengt
 It is not reversible, meaning you cannot obtain the original data from the hash value.
 Hashing is commonly used for data verification and password storage. It allows you to compare hash values to verify data integrity or check if a password is correct without storing the actual password.
 In summary, encryption is used for securing data and is reversible, encoding is used for data representation and is reversible, while hashing is used for data verification and is not reversible.
+
+
+what is nic command in linux?
+A NIC provides a computer with a dedicated, full-time connection to a network. It implements the physical layer circuitry necessary for communicating with a data link layer standard, such as Ethernet or Wi-Fi. Each card represents a device and can prepare, transmit and control the flow of data on the network.
+
+
+what is w command in linux?
+The 'w' command in Linux gives us important information about who is currently using the computer, how much the computer is being used, and what programs are running
+
+ansible architecture?
