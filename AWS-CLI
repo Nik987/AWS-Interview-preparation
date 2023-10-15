@@ -1,0 +1,68 @@
+Start ec2	
+aws ec2 start-instances --instance-ids i-12345678
+
+Stop ec2
+aws ec2 stop-instances --instance-ids i-12345678
+
+Terminate intsace
+aws ec2 terminate-instances --instance-ids i-12345678
+
+Restart instance
+aws ec2 reboot-instances --instance-ids i-12345678
+
+Create AMI of EC2
+aws ec2 create-image --instance-id i-0cbc0d002631aae77 --name "MyServer-AMI" --description "Backup of my web server"
+
+Create Snapshot (with id)
+aws ec2 create-snapshot --volume-id vol-0bb9f0df291f975ab --description "My EBS Snapshot"
+
+Delete Snapshot (with id)
+aws ec2 delete-snapshot --snapshot-id snap-0dd09dd7115e5a37f
+
+
+Create new ec2 machine using AWS CLI Commands
+aws ec2 run-instances --image-id ami-0c9eb1ffe93ce48f4 --instance-type t2.micro --key-name vault --subnet-id subnet-089d609b00ccb977e
+
+
+Volume increase 8GB - 10GB
+aws ec2 modify-volume --volume-id vol-07b4ad43e9f65c232 --size 10
+
+
+
+aws s3api create-bucket --bucket clidemo-bucket --region us-east-1
+
+
+aws s3 cp C:\Users\ncs\Documents s3://clidemo-bucket/ --recursive
+
+
+aws s3 rm s3://clidemo-bucket/ --recursive
+
+
+aws s3 rb s3://clidemo-bucket
+
+
+
+aws ec2 create-security-group --group-name demo-security-group --description "My new security group" --vpc-id vpc-03f4b3baa75d81714
+
+
+aws ec2 authorize-security-group-egress --group-id sg-0f4b9a519f4283c74 --protocol all --port -1 --destination 198.51.100.10
+
+
+aws ec2 modify-instance-attribute --instance-id i-0ac97f683d404280e --groups sg-0f4b9a519f4283c74
+
+
+aws autoscaling update-auto-scaling-group --auto-scaling-group-name my-auto-scaling-group --desired-capacity 5
+
+
+
+
+aws autoscaling create-auto-scaling-group --auto-scaling-group-name my-asg --launch-template LaunchTemplateId=lt-01c731228fb57ea0a --min-size 1 --max-size 5 --vpc-zone-identifier "subnet-0d48a3745d5b3212d,subnet-00d72f740d0ed3ca4"
+
+
+aws autoscaling update-auto-scaling-group --auto-scaling-group-name my-asg --desired-capacity 5
+
+
+aws autoscaling start-instance-refresh --auto-scaling-group-name my-asg --strategy Rolling
+
+
+aws elbv2 deregister-targets --target-group-arn arn:aws:autoscaling:us-east-1:359497447556:autoScalingGroup:a42f3903-2a48-425b-8979-85d069250d30:autoScalingGroupName/my-asg
