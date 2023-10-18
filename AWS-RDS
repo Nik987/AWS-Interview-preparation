@@ -1,1 +1,111 @@
 
+
+[13:16] Nikhil Nanekar
+
+Use Case : AWS RDS MySQL Setup 
+
+Provision new RDS - MySQL DB in AWS with below specifications and perform below task.
+
+ Region : Mumbai
+
+ Availability Zone : any
+
+ Instance Type : t2.micro (free tier)
+
+ DB Name : mysqldemo
+
+ Security Group : Port 3306 ( mysql port should be open over internet)
+
+ 
+
+Architecture :
+
+ 
+
+ 
+
+Once DB will come to ready step , perform CRUD operation
+
+ 
+
+#Create new Database
+
+CREATE DATABASE dbdemo;
+
+ 
+
+#Select Database
+
+USE rdsdemo;
+
+ 
+
+#Create table
+
+CREATE TABLE emp(
+
+   EmpId int,
+
+   LastName varchar(255),
+
+   FirstName varchar(255),
+
+   Address varchar(255),
+
+   City varchar(255)
+
+);
+
+ 
+
+#How to Add new record in table
+
+insert into emp values (1, 'Joshi','Mangesh','Nagpur','Maharashtra')
+
+insert into emp values (2, 'Patil','Sameer','Pune','Maharashtra')
+
+ 
+
+# How to view all records in table
+
+select * from emp
+
+ 
+
+# How to delete record from table
+
+delete from emp where EmpId = 2
+
+ 
+
+# update record in table
+
+update emp
+
+set FirstName = "Sachin"
+
+where empid = 1
+
+ 
+
+ 
+
+CRUD Operations
+
+ Create Record 
+
+ Read 
+
+ Update 
+
+ Delete
+
+ 
+
+ SQL Learning - https://www.w3schools.com/sql/default.asp
+
+ SQL Electron - https://sqlectron.github.io
+
+SQL Tutorial
+
+W3Schools offers free online tutorials, references and exercises in all the major languages of the web. Covering popular subjects like HTML, CSS, JavaScript, Python, SQL, Java, and many, many more.
